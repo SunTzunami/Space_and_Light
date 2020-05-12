@@ -1,0 +1,13 @@
+A red giant is a luminous giant star of low or intermediate mass
+(roughly 0.3-8 solar masses) in a late phase of stellar evolution.
+The outer atmosphere is inflated and tenuous,
+making the radius large and the surface temperatures around 5,000 K or lower.
+The appearance of the red giant is from yellow-orange to red,
+including the spectral types K & M, but also class S stars & most carbon stars.
+The most common red giants are stars on the red-giant branch that are still
+fusing hydrogen into helium in a shell surrounding an inert helium core. 
+Other red giants are red-clump stars in the cool half of the horizontal branch,
+fusing helium into carbon in their cores via the triple-alpha process;
+and the asymptotic-giant-branch (AGB) stars with a helium burning shell
+outside a degenerate carbon-oxygen core
+and a hydrogen burning shell just beyond that.
