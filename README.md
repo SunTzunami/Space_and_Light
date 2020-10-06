@@ -6,14 +6,17 @@ The quiz function uses an interesting point award system (points are awarded bas
 
 # 1.Sunlight-
 Shows the path of a ray of sunlight reaching earth.
+
 ![Preview](Demo/sunlight.gif)
 
 # 2.Red Giant-
 5 billion years from now, the sun will become a red giant. (Scary!!!)
+
 ![Preview](Demo/redgiant.gif)
 
 # 3.Dispersion of light-
 Dispersion of a ray of white light by a prism.
+
 ![Preview](Demo/dispersion.gif)
 
 
