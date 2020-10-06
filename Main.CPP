@@ -483,7 +483,7 @@ void user()
 		gotoxy(9,14);
 		int ch,x=0;
 		cout<<"1.Sunlight\n\t2.Red Giant/End of Earth.\n\t3.Dispersion of light.\n\t4.Quiz\n\t5.Highscore\n\t6.Exit";
-		cout<<"\n\tInput your choice(1/2/3/4/5/6/7)- ";
+		cout<<"\n\tInput your choice(1/2/3/4/5/6)- ";
 		setcolor(BLUE);
 		line(620,0,620,500);
 		line(20,0,20,500);
