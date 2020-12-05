@@ -1,5 +1,5 @@
 # Space and Light (C++ project '18)
-High school computer science project (used graphics library of C++ 3.0 to make it look kinda cool). C++ 3.0 was used and I had to code this with Turbo C++ as the compiler as CBSE mandated it.  
+High school computer science project (used graphics library of C++ 3.0 to make it look kinda cool). I had to code this with Turbo C++ as the compiler as CBSE mandated it.  
 
 Most OOPs concepts like polymorphism, inheritance and encapsulation were utilised. Data file handling too was used.
 I devised an interesting algorithm to award points via the quiz function- points are awarded based on swiftness in answering: quicker the user response, more points will be awarded, provided that the user response is correct. 
