@@ -9,7 +9,7 @@ void hsmile();
 void ssmile();
 void planets();
 void stars();
-void timer(int &a,int &bonus,char q[])   #timer to keep allocate more points for swifter and accurate responses
+void timer(int &a,int &bonus,char q[])   #timer to allocate more points for swifter and accurate responses
 {
 	cleardevice();
 	stars();
