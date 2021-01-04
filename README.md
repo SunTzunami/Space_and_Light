@@ -17,6 +17,6 @@ Shows the path of a ray of sunlight reaching earth.
 ![Preview](Demo/sunlight.gif)
 
 # 3.Red Giant-
-5 billion years from now, the sun will become a red giant. (Scary!!!)
+5 billion years from now, the sun will become a red giant. (will not happen in my lifetime but it still scares the bejesus out of me)
 
 ![Preview](Demo/redgiant.gif)
