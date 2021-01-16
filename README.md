@@ -1,4 +1,4 @@
-# Space and Light (C++ project '18)
+# Space and Light: High School Comp-sci Project(2018)
 High school computer science project (used graphics library of C++ 3.0 to make it look kinda cool). I had to code this with Turbo C++ as CBSE mandated it.  
 
 Most OOPs concepts like polymorphism, inheritance and encapsulation were utilised. Data file handling too was used.
