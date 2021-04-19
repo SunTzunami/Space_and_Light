@@ -9,7 +9,7 @@ void hsmile();
 void ssmile();
 void planets();
 void stars();
-void timer(int &a,int &bonus,char q[])   //timer to allocate more points for swifter and accurate responses
+void timer(int &a,int &bonus,char q[])   // timer to keep track of time and allocate bonus points accordingly
 {
 	cleardevice();
 	stars();
@@ -87,7 +87,7 @@ void timer(int &a,int &bonus,char q[])   //timer to allocate more points for swi
 //		circle(572,88,20);
 		setcolor(RED);
 		gotoxy(34,22);
-		if(i<100)
+		if(i<100)  // circle becomes larger as the time taken by user increases
 		{
 			circle(268,342,90-ba*0.8);
 		}
@@ -110,12 +110,12 @@ void timer(int &a,int &bonus,char q[])   //timer to allocate more points for swi
 	   else
 	   return;
 }
-class qa       //accessible by only admin
+class qa       // used to add/delete/modify questions and answers in the quiz file. Also used to compute score for the quiz
 {
-	char q[100];   //data members
+	char q[100];   // data members
 	int ans,qid;
 	public:
-	void init()                      //memb functions
+	void init()    // memb functions
 	{
 		cout<<"\n\tInput question id- ";
 		cin>>qid;
@@ -134,13 +134,13 @@ class qa       //accessible by only admin
 		cout<<"\n\tAnswer- ";
 		cout<<ans;
 	}
-	int dispu()
+	int dispu() 	// computes score according to time taken by user and returns it
 	{
 		gotoxy(4,12);
 		cleardevice();
 		stars();
 		planets();
-		int a=666,bonus=1;
+		int a=666,bonus=1;   
 		setcolor(RED);
 		settextstyle(0,HORIZ_DIR,9);
 		outtextxy(180,50,"QUIZ");
@@ -149,7 +149,7 @@ class qa       //accessible by only admin
 		cout<<q;
 		delay(1500);
 //		cout<<"\nInput the answer- ";
-		timer(a,bonus,q);
+		timer(a,bonus,q);    // calling the time function to calculate time taken to answer
 		if(a==ans)
 		{
 			gotoxy(4,12);
@@ -191,7 +191,7 @@ class qa       //accessible by only admin
 		return qid;
 	}
 }S;
-class highscore
+class highscore   // stores highscore of the quiz
 {
 	int highscore;
 	char name[50];
@@ -208,7 +208,7 @@ class highscore
 		cout<<"\nScore- "<<highscore;
 	}
 }h;
-void hsmile()
+void hsmile()  // happy smiley face
 {
 	setcolor(YELLOW);
 	setfillstyle(SOLID_FILL,YELLOW);
@@ -219,8 +219,8 @@ void hsmile()
 	fillellipse(320,280,5,5);
 	setcolor(BLACK);
 	arc(300,285,225,315,30);
-}//joyous
-void ssmile()
+}
+void ssmile() // sad smiley face
 {
 	setcolor(YELLOW);
 	setfillstyle(SOLID_FILL,YELLOW);
@@ -231,8 +231,8 @@ void ssmile()
 	fillellipse(320,310,5,5);
 	setcolor(BLACK);
 	arc(300,360,45,135,30);
-}//sad
-void hsi()                      //writing high scores
+}
+void hsi()  // writing high scores
 {
 	fstream fout("hs.dat",ios::binary|ios::app|ios::out);
 	if(!fout)
@@ -244,7 +244,7 @@ void hsi()                      //writing high scores
 	fout.close();
 	return;
 }
-void hso()                    //reading high scores
+void hso()  // reading high scores
 {
 	cleardevice();
 	settextstyle(7,HORIZ_DIR,4);
@@ -272,7 +272,7 @@ void hso()                    //reading high scores
 	line(0,460,650,460);
 	getch();
 }
-void wr()
+void wr()  // adding a new question and answer in the quiz file
 {
 	fstream fout("quiz.dat",ios::binary|ios::app|ios::out);
 	if(!fout)
@@ -285,7 +285,7 @@ void wr()
 	fout.close();
 	return;
 }
-void modify()
+void modify() // modify question and answer in the quiz file
 {
 	int check=0;
 	int id;
@@ -328,7 +328,7 @@ void modify()
 	}
 	fio.close();
 }
-void del()
+void del() // delete question and answer in the quiz file
 {
 	qa temp,B;
 	fstream fout("v.dat",ios::binary|ios::app|ios::in);
@@ -381,7 +381,7 @@ void del()
 			}
 	}
 }
-void planets()  //planets
+void planets()  // to render planets
 {
 	for(int i=0;i<900;i++)
 	{
@@ -398,9 +398,9 @@ void planets()  //planets
 		}
 	}
 }
-void stars()
+void stars()  // to render stars
 {
-	for(int i=0;i<900;i++)   //<<STARS
+	for(int i=0;i<900;i++)   
 	{
 		setcolor(07);
 		for(int y=0;y<900;y++)
@@ -412,7 +412,7 @@ void stars()
 		}
 	}
 }
-void credits()
+void credits()  // display credits
 {
 	cleardevice();
 	setbkcolor(0);
@@ -429,7 +429,7 @@ void credits()
 //	delay(3000);
 	cleardevice();
 }
-int quiz()
+int quiz()   // Quiz function
 {
 	int score=0;
 	cleardevice();
@@ -454,8 +454,8 @@ int quiz()
 	line(0,20,650,20);
 	line(0,460,650,460);
 	getch();
-	fstream fin("quiz.dat",ios::binary|ios::in);
-	while(!fin.eof())
+	fstream fin("quiz.dat",ios::binary|ios::in);  // reading quiz file to load questions and answers
+	while(!fin.eof())          
 	{
 		fin.read((char*)&S,sizeof(S));
 		if(fin.eof())
@@ -466,11 +466,11 @@ int quiz()
 	}
 	return score;
 }
-void topic1();
-void topic2();
-void topic3();
-//void topic4();  //black hole for future
-void user()
+void topic1();  // sunlight
+void topic2();	// red giant
+void topic3(); 
+
+void user()	// User menu to access different visuals, attempt the quiz and display the highscore
 {
 		lb:
 		cleardevice();
@@ -513,7 +513,7 @@ void user()
 				goto lb;
 		}
 }
-void admin()
+void admin()	//Admin menu, accessible only after entering the password
 {
 	lb:
 	cleardevice();
@@ -524,13 +524,13 @@ void admin()
 	outtextxy(100,60,"ADMIN MENU");
 	gotoxy(12,10);
 	int ch;
-	cout<<"1.Display a question and answer.";
+	cout<<"1.Display a question and answer.";	// display questions and answers
 	gotoxy(12,11);
-	cout<<"2.Add a question and answer.";
+	cout<<"2.Add a question and answer.";		// add a question and answer
 	gotoxy(12,12);
-	cout<<"3.Delete a question and answer.";
+	cout<<"3.Delete a question and answer.";	// delete a question and answer
 	gotoxy(12,13);
-	cout<<"4.Modify a question and answer.";
+	cout<<"4.Modify a question and answer.";	// modify a question and answer
 	gotoxy(12,14);
 	cout<<"5.Go back to main menu.(Log out)";
 	gotoxy(12,15);
@@ -571,7 +571,7 @@ void admin()
 	}
 	goto lb;
 }
-void menu()
+void menu()	// Main menu, used to access user menu and admin menu
 {
 	lb1:
 	settextstyle(3,HORIZ_DIR,6);
@@ -637,7 +637,7 @@ void menu()
 	}
 	goto lb1;
 }
-void topic1()
+void topic1()		// Sunlight
 {
 	cleardevice();
 	setcolor(YELLOW);
@@ -752,7 +752,7 @@ void topic1()
 	getch();
 	user();
 }
-void topic2()
+void topic2()		// Red Giant
 {
 	cleardevice();
 	setbkcolor(BLACK);
@@ -864,7 +864,7 @@ void topic2()
 	getch();
 	user();
 }
-void topic3()
+void topic3()		// Dispersion of Light
 {
 	cleardevice();
 	settextstyle(7,HORIZ_DIR,4);
